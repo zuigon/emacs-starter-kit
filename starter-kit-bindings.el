@@ -4,6 +4,11 @@
 
 ;; TODO: switch to kbd invocations everywhere
 
+
+;; Option -> META key
+(setq mac-option-modifier 'meta)
+
+
 ;; You know, like Readline.
 (global-set-key "\C-\M-h" 'backward-kill-word)
 

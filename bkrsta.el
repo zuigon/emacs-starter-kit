@@ -26,6 +26,11 @@
 (defvar backup-dir (concat "/tmp/emacs_backups/" (user-login-name) "/"))
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
+
+;; Magit
+(require 'magit)
+
+
 ;; Clojure
 ;;(eval-after-load 'clojure-mode '(clojure-slime-config))
 
@@ -103,7 +108,7 @@
 (setq org-agenda-files (list "~/.org/iphone-screencast.org"))
 
 ;; Font
-(set-face-font 'default "-apple-inconsolata-medium-r-normal--20-0-72-72-m-0-iso10646-1")
+(set-face-font 'default "-apple-monaco-medium-r-normal--14-0-72-72-m-0-iso10646-1")
 
 ;; Color Themes
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
@@ -459,5 +464,11 @@
 ;;; theme-end
 
 ;; Activate theme
-(color-theme-helvetica)
+; (color-theme-helvetica) --
 ;; (color-theme-emacs-21)
+
+(load "color-theme-ir-black")
+(load "color-theme-twilight")
+
+(color-theme-twilight)
+
