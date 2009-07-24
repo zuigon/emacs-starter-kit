@@ -57,5 +57,10 @@
 (if (file-exists-p system-specific-config) (load system-specific-config))
 (if (file-exists-p user-specific-config) (load user-specific-config))
 
+
+;; ErgoKeyBinding
+(load "ergonomic-keybinding.el")
+
+
 (provide 'init)
 ;;; init.el ends here

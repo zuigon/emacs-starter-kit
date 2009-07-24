@@ -30,8 +30,7 @@
 ;; Magit
 (require 'magit)
 
-;; ErgoKeyBinding
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/ergonomic-keybinding.el"))
+
 
 
 ;; Clojure
