@@ -59,7 +59,7 @@
 
 
 ;; ErgoKeyBinding
-(load "ergonomic-keybinding.el")
+; (load "ergonomic-keybinding.el")
 
 
 (provide 'init)

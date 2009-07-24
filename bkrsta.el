@@ -31,8 +31,6 @@
 (require 'magit)
 
 
-
-
 ;; Clojure
 ;;(eval-after-load 'clojure-mode '(clojure-slime-config))
 

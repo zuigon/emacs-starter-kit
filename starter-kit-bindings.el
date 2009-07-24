@@ -6,7 +6,10 @@
 
 
 ;; Option -> META key
+(set-keyboard-coding-system 'mac-roman) 
+(mac-key-mode)
 (setq mac-option-modifier 'meta)
+(setq mac-command-key-is-meta nil)
 
 
 ;; You know, like Readline.
