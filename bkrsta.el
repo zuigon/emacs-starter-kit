@@ -477,9 +477,12 @@
 ; (color-theme-helvetica) --
 ;; (color-theme-emacs-21)
 
-(load "color-theme-ir-black")
-(load "color-theme-twilight")
-(load "color-theme-vividchalk.el")
+(load-file "color-custom/color-theme-blackboard-kjh.el")
+(load-file "color-custom/color-theme-ir-black.el")
+(load-file "color-custom/color-theme-tango2.el")
+(load-file "color-custom/color-theme-twilight.el")
+(load-file "color-custom/color-theme-vividchalk.el")
+(load-file "color-custom/custom-color-themes.el")
 
 (color-theme-twilight)
 
