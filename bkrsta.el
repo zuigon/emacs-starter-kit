@@ -485,13 +485,3 @@
 
 (color-theme-twilight)
 
-;; Specijalni znakovi
-(global-set-key "\M-\"" "@")
-(global-set-key "\M-š" "\[") ;; [
-(global-set-key "\M-đ" "\]") ;; ]
-(global-set-key "\M-Š" "\[") ;; {
-(global-set-key "\M-Đ" "\]") ;; }
-(global-set-key "\M-ć" "^")  ;; ^
-(global-set-key "\M-ž" "\\") ;; \
-(global-set-key "\M-Ž" "\\") ;; |
-

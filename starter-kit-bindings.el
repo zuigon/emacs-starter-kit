@@ -11,6 +11,16 @@
 (setq mac-option-modifier 'meta)
 (setq mac-command-key-is-meta nil)
 
+;; Specijalni znakovi
+(global-set-key (kbd "M-\"") "@")
+(global-set-key (kbd "M-š") "\[") ;; [
+(global-set-key (kbd "M-đ") "\]") ;; ]
+(global-set-key (kbd "M-Š") "\[") ;; {
+(global-set-key (kbd "M-Đ") "\]") ;; }
+(global-set-key (kbd "M-ć") "^")  ;; ^
+(global-set-key (kbd "M-ž") "\\") ;; \
+(global-set-key (kbd "M-Ž") "\\") ;; |
+
 
 ;; You know, like Readline.
 (global-set-key "\C-\M-h" 'backward-kill-word)
