@@ -477,7 +477,6 @@
 ; (color-theme-helvetica) --
 ;; (color-theme-emacs-21)
 
-(load "color-custom/color-theme-blackboard-kjh.el")
 (load "color-custom/color-theme-ir-black.el")
 (load "color-custom/color-theme-tango2.el")
 (load "color-custom/color-theme-twilight.el")
@@ -485,4 +484,14 @@
 (load "color-custom/custom-color-themes.el")
 
 (color-theme-twilight)
+
+;; Specijalni znakovi
+(global-set-key "\M-\"" "@")
+(global-set-key "\M-š" "\[") ;; [
+(global-set-key "\M-đ" "\]") ;; ]
+(global-set-key "\M-Š" "\[") ;; {
+(global-set-key "\M-Đ" "\]") ;; }
+(global-set-key "\M-ć" "^")  ;; ^
+(global-set-key "\M-ž" "\\") ;; \
+(global-set-key "\M-Ž" "\\") ;; |
 
