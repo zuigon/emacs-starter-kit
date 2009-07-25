@@ -479,6 +479,7 @@
 
 (load "color-theme-ir-black")
 (load "color-theme-twilight")
+(load "color-theme-vividchalk.el")
 
 (color-theme-twilight)
 
