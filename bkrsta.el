@@ -159,6 +159,16 @@
 
 (global-set-key [(control \])] 'indent-rigidly)
 
+
+;; IJKL Movement
+;; Single char cursor movement
+
+(global-set-key (kbd "C-č") 'backward-char)
+(global-set-key (kbd "C-ž") 'forward-char)
+(global-set-key (kbd "C-š") 'previous-line)
+(global-set-key (kbd "C-ć") 'next-line)
+
+
 ;; Other
 
 (prefer-coding-system 'utf-8)
