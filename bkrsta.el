@@ -86,6 +86,12 @@
 
 (add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
 
+
+(autoload 'csharp-mode "csharp-mode.el"
+  "Major mode for C#" t)
+(add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-mode))
+
+
 ;; XCODE
 (require 'objc-c-mode)
 (require 'xcode)
@@ -115,7 +121,12 @@
 (require 'color-theme)
 (color-theme-initialize)
 
+;; Tab size
+(setq default-tab-width 4)
+
 ;; Functions
+
+(require 'pointback)
 
 (require 'line-num)
 
@@ -485,3 +496,6 @@
 
 (color-theme-twilight)
 
+(desktop-save-mode 1)
+
+(require 'layout-restore)
