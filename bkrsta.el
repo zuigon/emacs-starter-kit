@@ -497,5 +497,3 @@
 (color-theme-twilight)
 
 (desktop-save-mode 1)
-
-(require 'layout-restore)
