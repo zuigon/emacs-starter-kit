@@ -497,3 +497,7 @@
 (color-theme-twilight)
 
 (desktop-save-mode 1)
+
+
+(load "pastie.el")
+(load "twit.el")
