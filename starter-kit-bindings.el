@@ -128,5 +128,13 @@
      (set-face-foreground 'magit-diff-add "green3")
      (set-face-foreground 'magit-diff-del "red3")))
 
+(setq skeleton-pair t) 
+(global-set-key "(" 'skeleton-pair-insert-maybe) 
+(global-set-key "[" 'skeleton-pair-insert-maybe) 
+(global-set-key "\"" 'skeleton-pair-insert-maybe) 
+;; (global-set-key "'" 'skeleton-pair-insert-maybe) 
+(global-set-key "{" 'skeleton-pair-insert-maybe)
+
+
 (provide 'starter-kit-bindings)
 ;;; starter-kit-bindings.el ends here
