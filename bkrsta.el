@@ -190,14 +190,6 @@
 ;; TODO Move to separate theme file.
 
 ;;; theme-start
-(defun topfunky-reload-theme ()
-  "Reload init.el and the color-theme-helvetica"
-  (interactive)
-  (save-buffer)
-  (eval-buffer)
-  (color-theme-helvetica))
-
-(global-set-key [f8] 'topfunky-reload-theme)
 
 ;; theme-colors
 ;; yellow: #ffffcc
