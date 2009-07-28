@@ -501,3 +501,9 @@
 
 (load "pastie.el")
 (load "twit.el")
+
+
+(load-file (concat dotfiles-dir "/vendor/cedet/common/cedet.el"))
+
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/ecb-snap"))
+(require 'ecb-autoloads)

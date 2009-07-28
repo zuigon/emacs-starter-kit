@@ -24,6 +24,12 @@
 ;; Scrolling (scroll-lock-mode)
 (global-set-key (kbd "C-<") (lambda () (interactive) (scroll-lock-mode)))
 
+;; Resize window
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
 
 ;; You know, like Readline.
 (global-set-key "\C-\M-h" 'backward-kill-word)
