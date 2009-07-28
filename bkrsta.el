@@ -191,13 +191,6 @@
 
 ;;; theme-start
 
-;; theme-colors
-;; yellow: #ffffcc
-;; blue:   #6688ee
-;; green:  #52c62b
-;; lightest grey: #f1f1f1
-;; greys: #aa, #bb, #cc
-;; light blue:    #c2cff1
 
 (defun color-theme-helvetica ()
   "Attempt at a modern theme."
@@ -490,7 +483,6 @@
 
 (desktop-save-mode 1)
 
-
 (load "pastie.el")
 (load "twit.el")
 
@@ -499,3 +491,5 @@
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/ecb-snap"))
 (require 'ecb-autoloads)
+
+(toggle-fullscreen)

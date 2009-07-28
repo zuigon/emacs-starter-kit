@@ -4,6 +4,7 @@
 
 (require 'thingatpt)
 (require 'imenu)
+(require 'dired)
 
 ;; Network
 
@@ -156,6 +157,44 @@
   "If you can't pair program with a human, use this instead."
   (interactive)
   (message (if (y-or-n-p "Do you have a test for that? ") "Good." "Bad!")))
+
+;; ::
+
+(defun dired-open-mac ()
+  (interactive)
+  (let ((file-name (dired-get-file-for-visit)))
+    (if (file-exists-p file-name)
+        (call-process "/usr/bin/open" nil 0 nil file-name))))
+
+(defun system-is-pc02 ()
+  (interactive)
+  (or (string-equal system-name "pc02")
+      (string-equal system-name "pc-02"))
+)
+
+(defun system-is-pc03 ()
+  (interactive)
+  (or (string-equal system-name "pc03")
+      (string-equal system-name "pc-03"))
+)
+
+; (defun system-is-pc04 ()
+;   (interactive)
+;   (or (string-equal system-name "pc04.local")
+;       (string-equal system-name "pc04"))
+;   )
+
+(defun system-is-server ()
+  (interactive)
+  (or (string-equal system-name "server.local")
+      (string-equal system-name "server"))
+)
+
+(defun system-is-imac ()
+  (interactive)
+  (or (string-equal system-name "imac.local")
+      (string-equal system-name "imac"))
+)
 
 (provide 'starter-kit-defuns)
 ;;; starter-kit-defuns.el ends here

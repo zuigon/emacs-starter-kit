@@ -4,7 +4,6 @@
 
 ;; TODO: switch to kbd invocations everywhere
 
-
 ;; Option -> META key
 (set-keyboard-coding-system 'mac-roman) 
 (mac-key-mode)
@@ -25,10 +24,10 @@
 (global-set-key (kbd "C-<") (lambda () (interactive) (scroll-lock-mode)))
 
 ;; Resize window
-(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<left>")  'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "S-C-<down>") 'shrink-window)
-(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+(global-set-key (kbd "S-C-<down>")  'shrink-window)
+(global-set-key (kbd "S-C-<up>")    'enlarge-window)
 
 
 ;; You know, like Readline.
@@ -56,19 +55,19 @@
 (global-set-key "\C-x\C-i" 'ido-imenu)
 
 ;; File finding
-(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
+(global-set-key (kbd "C-x M-f")   'ido-find-file-other-window)
 (global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
-(global-set-key (kbd "C-x f") 'recentf-ido-find-file)
-(global-set-key (kbd "C-x C-p") 'find-file-at-point)
-(global-set-key (kbd "C-c y") 'bury-buffer)
-(global-set-key (kbd "C-c r") 'revert-buffer)
-(global-set-key (kbd "M-`") 'file-cache-minibuffer-complete)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x f")     'recentf-ido-find-file)
+(global-set-key (kbd "C-x C-p")   'find-file-at-point)
+(global-set-key (kbd "C-c y")     'bury-buffer)
+(global-set-key (kbd "C-c r")     'revert-buffer)
+(global-set-key (kbd "M-`")       'file-cache-minibuffer-complete)
+(global-set-key (kbd "C-x C-b")   'ibuffer)
 
 ;; Window switching. (C-x o goes to the next window)
 (windmove-default-keybindings) ;; Shift+direction
-(global-set-key "\C-xO" (lambda () (interactive) (other-window -1))) ;; back one
-(global-set-key "\C-x\C-o" (lambda () (interactive) (other-window 2))) ;; forward two
+(global-set-key "\C-xO"    (lambda () (interactive) (other-window -1))) ;; back one
+(global-set-key "\C-x\C-o" (lambda () (interactive) (other-window 2)))  ;; forward two
 
 ;; Start eshell or switch to it if it's active.
 (global-set-key (kbd "C-x m") 'eshell)
@@ -95,9 +94,9 @@
 (global-set-key (kbd "C-c i") (lambda () (interactive) (switch-or-start (lambda ()
                                                                           (rcirc-connect "irc.freenode.net"))
                                                                    "*irc.freenode.net*")))
-(global-set-key (kbd "C-c J") 'jabber-send-presence)
+(global-set-key (kbd "C-c J")   'jabber-send-presence)
 (global-set-key (kbd "C-c M-j") 'jabber-disconnect)
-(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x g")   'magit-status)
 
 
 ;; This is a little hacky since VC doesn't support git add internally
@@ -113,6 +112,21 @@
   (lambda () (interactive)
     (let ((case-fold-search isearch-case-fold-search))
       (occur (if isearch-regexp isearch-string (regexp-quote isearch-string))))))
+
+
+(define-key dired-mode-map "o" 'dired-open-mac)
+
+; - is `cd ..` (like vim)
+(define-key dired-mode-map "-" 'dired-up-directory)
+
+; prefer dired over dumping dir list to buffer
+(global-set-key "\C-x\C-d" 'dired)
+
+; magit
+(eval-after-load 'magit
+  '(progn
+     (set-face-foreground 'magit-diff-add "green3")
+     (set-face-foreground 'magit-diff-del "red3")))
 
 (provide 'starter-kit-bindings)
 ;;; starter-kit-bindings.el ends here
