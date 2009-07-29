@@ -196,5 +196,11 @@
       (string-equal system-name "imac"))
 )
 
+(defun reload () (interactive)
+  "Reload .emacs"
+  ;(persistent-session-save-alist-to-file)
+  (load-file (concat dotfiles-dir "/init.el"))
+)
+
 (provide 'starter-kit-defuns)
 ;;; starter-kit-defuns.el ends here
