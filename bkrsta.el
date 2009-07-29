@@ -492,4 +492,6 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/ecb-snap"))
 (require 'ecb-autoloads)
 
+(load "vendor/itunes-osx.el")
+
 (toggle-fullscreen)
