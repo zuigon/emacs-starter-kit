@@ -478,6 +478,7 @@
 (load "color-custom/color-theme-twilight.el")
 (load "color-custom/color-theme-vividchalk.el")
 (load "color-custom/custom-color-themes.el")
+(load "color-custom/color-theme-railscasts.el")
 
 (color-theme-twilight)
 
