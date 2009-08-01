@@ -495,6 +495,8 @@
 
 (load "vendor/itunes-osx.el")
 
+(load "vendor/ascii-table.el")
+
 ;; W3
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/w3/lisp"))
 (require 'w3)
