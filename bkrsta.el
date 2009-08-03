@@ -497,6 +497,11 @@
 
 (load "vendor/ascii-table.el")
 
+;; Linum
+(require 'linum)
+(setq linum-format "%d | ")
+(global-linum-mode 1)
+
 ;; W3
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/w3/lisp"))
 (require 'w3)
