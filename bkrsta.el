@@ -2,6 +2,9 @@
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 
+;;; Environment variables
+(setenv "PATH"  "/usr/local/git/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/sw/bin:/usr/local/git/bin:/usr/local/mysql-5.1.32-osx10.5-x86/bin/:~/.gem/ruby/1.8/bin")
+
 ;; Save backups in one place
 ;; Put autosave files (ie #foo#) in one place, *not*
 ;; scattered all over the file system!
@@ -121,6 +124,29 @@
 (require 'color-theme)
 (color-theme-initialize)
 
+
+;; Other modes
+(load "pastie.el")
+(load "twit.el")
+(load "vendor/itunes-osx.el")
+(load "vendor/ascii-table.el")
+
+(load-file (concat dotfiles-dir "/vendor/cedet/common/cedet.el"))
+
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/ecb-snap"))
+(require 'ecb-autoloads)
+
+;; Linum
+(require 'linum)
+;;(setq linum-format "%d | ")
+;;(global-linum-mode 1)
+
+;; W3
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/w3/lisp"))
+(require 'w3)
+
+
+
 ;; Tab size
 (setq default-tab-width 4)
 
@@ -190,7 +216,6 @@
 ;; TODO Move to separate theme file.
 
 ;;; theme-start
-
 
 (defun color-theme-helvetica ()
   "Attempt at a modern theme."
@@ -482,28 +507,8 @@
 
 (color-theme-twilight)
 
+;; Save layout on exit
 (desktop-save-mode 1)
 
-(load "pastie.el")
-(load "twit.el")
-
-
-(load-file (concat dotfiles-dir "/vendor/cedet/common/cedet.el"))
-
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/ecb-snap"))
-(require 'ecb-autoloads)
-
-(load "vendor/itunes-osx.el")
-
-(load "vendor/ascii-table.el")
-
-;; Linum
-(require 'linum)
-(setq linum-format "%d | ")
-(global-linum-mode 1)
-
-;; W3
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/w3/lisp"))
-(require 'w3)
 
 (toggle-fullscreen)

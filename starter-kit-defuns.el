@@ -202,5 +202,12 @@
   (load-file (concat dotfiles-dir "/init.el"))
 )
 
+;; Change the default eshell prompt
+(setq eshell-prompt-function
+      (lambda ()
+              (concat (getenv "USER") "@"
+                      (car (split-string (getenv "HOSTNAME") "[.]"))
+                      (if (= (user-uid) 0) " # " " $ "))))
+
 (provide 'starter-kit-defuns)
 ;;; starter-kit-defuns.el ends here
