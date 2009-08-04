@@ -135,6 +135,7 @@
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/ecb-snap"))
 (require 'ecb-autoloads)
+(setq ecb-tip-of-the-day nil) ; Disable tip of the day
 
 ;; Linum
 (require 'linum)
