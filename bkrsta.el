@@ -144,6 +144,7 @@
 
 ;; W3
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/w3/lisp"))
+;;(add-to-list 'load-path "/usr/share/emacs/site-lisp")
 (require 'w3)
 
 
