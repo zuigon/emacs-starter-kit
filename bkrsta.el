@@ -1,4 +1,4 @@
-;; DESCRIPTION: topfunky settings
+;; DESCRIPTION: bkrsta settings
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 
@@ -130,6 +130,7 @@
 (load "twit.el")
 (load "vendor/itunes-osx.el")
 (load "vendor/ascii-table.el")
+(require 'anything)
 
 (load-file (concat dotfiles-dir "/vendor/cedet/common/cedet.el"))
 
