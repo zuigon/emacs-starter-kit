@@ -4,3 +4,6 @@
 [submodule "vendor/textmate.el"]
   path = vendor/w3
   url = git://git.sv.gnu.org/w3.git
+[submodule "vendor/org-mode"]
+	path = vendor/org-mode
+	url = git://repo.or.cz/org-mode.git

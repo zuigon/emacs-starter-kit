@@ -111,10 +111,15 @@
             (local-set-key (kbd "C-c <down>")  'hs-show-all)
             (hs-minor-mode t)))         ; Hide and show blocks
 
-(require 'objj-mode)
+; (require 'objj-mode)
 
 ;; org-mode
-(setq org-agenda-files (list "~/.org/iphone-screencast.org"))
+(setq org-agenda-files (list "~/.org/bkrsta"))
+(setq org-directory (list "~/.org/bkrsta"))
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link) [1]
+(define-key global-map "\C-ca" 'org-agenda) [1]
+
 
 ;; Font
 (set-face-font 'default "-apple-monaco-medium-r-normal--14-0-72-72-m-0-iso10646-1")
@@ -130,6 +135,15 @@
 (load "twit.el")
 (load "vendor/itunes-osx.el")
 (load "vendor/ascii-table.el")
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/lisp"))
+(load "vendor/org-mode/lisp/org.el")
+
+; (require 'vimpulse)
+
+(setq gdb-many-windows t)
+
+
+
 (require 'anything)
 
 (load-file (concat dotfiles-dir "/vendor/cedet/common/cedet.el"))
@@ -191,7 +205,7 @@
 (global-set-key [(meta shift down)] 'ido-find-file)
 (global-set-key [(meta shift left)] 'magit-status)
 
-(global-set-key [(meta H)] 'delete-other-windows)
+; (global-set-key [(meta H)] 'delete-other-windows)
 
 (global-set-key [(meta D)] 'backward-kill-word) ;; (meta d) is opposite
 

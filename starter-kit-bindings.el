@@ -11,14 +11,14 @@
 (setq mac-command-key-is-meta nil)
 
 ;; Specijalni znakovi
-(global-set-key (kbd "M-\"") "@")
-(global-set-key (kbd "M-š") "\[") ;; [
-(global-set-key (kbd "M-đ") "\]") ;; ]
-(global-set-key (kbd "M-Š") "\{") ;; {
-(global-set-key (kbd "M-Đ") "\}") ;; }
-(global-set-key (kbd "M-ć") "^")  ;; ^
-(global-set-key (kbd "M-ž") "\\") ;; \
-(global-set-key (kbd "M-Ž") "\|") ;; |
+; (global-set-key (kbd "M-\"") "@")
+; (global-set-key (kbd "M-š") "\[") ;; [
+; (global-set-key (kbd "M-đ") "\]") ;; ]
+; (global-set-key (kbd "M-Š") "\{") ;; {
+; (global-set-key (kbd "M-Đ") "\}") ;; }
+; (global-set-key (kbd "M-ć") "^")  ;; ^
+; (global-set-key (kbd "M-ž") "\\") ;; \
+; (global-set-key (kbd "M-Ž") "\|") ;; |
 
 ;; Scrolling (scroll-lock-mode)
 (global-set-key (kbd "C-<") (lambda () (interactive) (scroll-lock-mode)))
