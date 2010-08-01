@@ -136,5 +136,58 @@
 (global-set-key "{" 'skeleton-pair-insert-maybe)
 
 
+;; org-mode bindings for quick access (see below)
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cr" 'org-remember)
+
+
+;{{{ Key bindings
+;    - with switched Caps_Lock and Control_L keys system wide
+
+;{{{ Main bindings
+;
+;; C-w to backward kill for compatibility (and ease of use)
+(global-set-key "\C-w"     'backward-kill-word)
+;; ...and then provide alternative for cutting
+(global-set-key "\C-x\C-k" 'kill-region)
+
+;; Change C-x C-b behavior (buffer management)
+(global-set-key "\C-x\C-b" 'electric-buffer-list)
+
+;; Reload or edit .emacs as defined above
+(global-set-key "\C-c\C-r" 'aic-reload-dot-emacs)
+(global-set-key "\C-c\C-e" 'aic-edit-dot-emacs)
+
+;; Toggle soft word wrapping
+(global-set-key "\C-cw" 'toggle-truncate-lines)
+
+;; Quick access to the speedbar
+(global-set-key "\C-cs" 'speedbar-get-focus)
+
+;; org-mode bindings for quick access (see below)
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cr" 'org-remember)
+
+;; Quicker access to go-to line
+(global-set-key (kbd "M-g") 'goto-line)
+
+;; Menu bar toggle, as in my vimperator setup
+(global-set-key (kbd "<M-down>") 'menu-bar-mode)
+
+;; Jump to the start/end of the document with C-PgUP/DN
+(global-set-key [C-prior] (lambda () (interactive) (goto-char (point-min))))
+(global-set-key [C-next]  (lambda () (interactive) (goto-char (point-max))))
+
+;; Require C-x C-c prompt, no accidental quits
+(global-set-key [(control x) (control c)] 
+  (function 
+   (lambda () (interactive) 
+     (cond ((y-or-n-p "Quit? ")
+       (save-buffers-kill-emacs)))))
+)
+
+
 (provide 'starter-kit-bindings)
 ;;; starter-kit-bindings.el ends here

@@ -44,6 +44,8 @@
 (require 'starter-kit-eshell)
 (require 'starter-kit-lisp)
 (require 'starter-kit-ruby)
+
+(require 'anrxc-stvari)
 ;; (require 'starter-kit-js)
 
 (regen-autoloads)
