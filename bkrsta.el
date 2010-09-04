@@ -3,8 +3,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 
 ;;; Environment variables
-(setenv "PATH"  "/usr/local/git/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/sw/bin:/usr/local/git/bin:/usr/local/mysql-5.1.32-osx10.5-x86/bin/:~/.gem/ruby/1.8/bin")
-
+(setenv "PATH"  "/usr/local/git/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/sw/bin:/usr/local/git/bin:/usr/local/mysql-5.1.32-osx10.5-x86/bin/:~/.gem/ruby/1.8/")
 
 (load "color-custom/color-theme-helvetica.el")
 (load "color-custom/color-theme-ir-black.el")
@@ -299,6 +298,12 @@
 (load "vendor/org-mode/lisp/org.el")
 
 ; (require 'vimpulse)
+
+;; Window numbering
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/window-numbering.el"))
+(require 'window-numbering)
+(window-numbering-mode 1)
+
 
 (setq gdb-many-windows t)
 
