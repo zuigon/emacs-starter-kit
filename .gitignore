@@ -2,6 +2,8 @@ loaddefs.el*
 backups/*
 *elc
 places
+emacs-bookmarks
+emacs-places
 .DS_Store
 
 /#topfunky.el#
