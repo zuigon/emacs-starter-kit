@@ -22,7 +22,7 @@
 ;; These should be loaded on startup rather than autoloaded on demand
 ;; since they are likely to be used in every session:
 
-(require 'cl)
+; (require 'cl)
 (require 'saveplace)
 (require 'ffap)
 (require 'uniquify)
@@ -44,6 +44,7 @@
 (require 'starter-kit-eshell)
 (require 'starter-kit-lisp)
 (require 'starter-kit-ruby)
+(require 'starter-kit-js)
 
 (require 'anrxc-stvari)
 ;; (require 'starter-kit-js)

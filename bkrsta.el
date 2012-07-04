@@ -330,7 +330,7 @@
 
 
 ;; Tab size
-(setq default-tab-width 4)
+(setq default-tab-width 2)
 
 ;; Functions
 
